@@ -8,7 +8,7 @@ if memo_type==1
   puts "拡張子を除いたファイル名を入力してください"
   input = gets.chomp
   puts "メモしたい内容を記入してください"
-  puts "完了したらCtrl + Zを押します"
+  puts "完了したらCtrl + Dを押します"
   #ファイルを作成し、書き込み → wモード
   CSV.open("#{input}.csv", "w") do |f|
     f << readlines(chomp:true)
@@ -18,7 +18,7 @@ elsif memo_type==2
   puts "拡張子を除いたファイル名を入力してください"
   input = gets.chomp
   puts "メモしたい内容を記入してください"
-  puts "完了したらCtrl + Zを押します"
+  puts "完了したらCtrl + Dを押します"
   #既存のファイルに追記 → aモード
   CSV.open("#{input}.csv", "a") do |f|
     f << readlines(chomp:true)
